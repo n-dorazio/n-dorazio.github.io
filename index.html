@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nathaniel D'Orazio | Student Developer</title>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="hide-on-small-only">
+        <ul class="side-nav fixed section table-of-contents">
+            <li class="logo">
+                <a id="logo-container" href="#intro" class="brand-logo">
+                    <img src="https://avatars.githubusercontent.com/u/113145289?v=4" class="circle img-responsive profile-pic" alt="Nathaniel D'Orazio">
+                </a>
+            </li>
+            <li class="bold">
+                <a href="#about" class="waves-effect waves-dark teal-text"><i class="fa fa-user small"></i><span>About</span></a>
+            </li>
+            <li class="bold">
+                <a href="#projects" class="waves-effect waves-dark teal-text"><i class="fa fa-code small"></i><span>Projects</span></a>
+            </li>
+            <li class="bold">
+                <a href="#education" class="waves-effect waves-dark teal-text"><i class="fa fa-graduation-cap small"></i><span>Education</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Intro Section -->
+        <section id="intro" class="section scrollspy full-height">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="col-md-9">
+                    <div class="content">
+                        <h2>Hi, I'm <span class="teal">Nathaniel D'Orazio</span></h2>
+                        <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
+                        <h5>Computer Science and Business Student at the University of Calgary with a passion for video game and app development.</h5>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/nathaniel-d-orazio-247392233/" target="_blank">
+                                <button class="icon-btn linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </button>
+                            </a>
+                            <a href="https://github.com/n-dorazio" target="_blank">
+                                <button class="icon-btn github">
+                                    <i class="fa fa-github"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+    <script>
+        // Simple typing effect
+        const texts = ["Developer", "Student", "Game Developer"];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.querySelector('.typing').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000);
+            } else {
+                setTimeout(type, 100);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            type();
+        });
+    </script>
+</body>
+</html> 
