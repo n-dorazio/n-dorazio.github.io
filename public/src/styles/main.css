@@ -1,0 +1,49 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './components/nav.css';
+@import './components/landing.css';
+@import './components/about.css';
+@import './components/skills.css';
+@import './components/projects.css';
+@import './components/footer.css';
+@import './animations.css';
+
+:root {
+    --primary: #8228ec;
+    --primary-dark: #1d4ed8;
+    --secondary: #64748b;
+    --accent: #f626af;
+    --background: #0d1224;
+    --text: #d3d8e8;
+    --text-light: #84738c;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--background);
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+    }
+}
+
+@layer components {
+    .container {
+        @apply max-w-[1200px] mx-auto px-5;
+    }
+}
