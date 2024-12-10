@@ -1,6 +1,6 @@
 /* About Section */
 .about-section {
-    background: var(--white);
+    background: var(--background);
     padding: 120px 0;
 }
 
@@ -38,5 +38,4 @@
     .about-section h2 {
         font-size: 2rem;
     }
-    
 }
