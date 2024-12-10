@@ -2,20 +2,19 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import './animations.css';
+@import './components/background.css';
 @import './components/nav.css';
 @import './components/landing.css';
 @import './components/about.css';
 @import './components/skills.css';
 @import './components/projects.css';
 @import './components/footer.css';
-@import './animations.css';
 
 :root {
-    --primary: #8228ec;
-    --primary-dark: #1d4ed8;
-    --secondary: #64748b;
-    --accent: #f626af;
     --background: #0d1224;
+    --primary: #8228ec;
+    --accent: #f626af;
     --text: #d3d8e8;
     --text-light: #84738c;
     --white: #ffffff;
@@ -33,7 +32,10 @@
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         line-height: 1.6;
         color: var(--text);
-        background: var(--background);
+        background-color: var(--background);
+        position: relative;
+        overflow-x: hidden;
+        min-height: 100vh;
     }
 
     html {

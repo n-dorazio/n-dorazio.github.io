@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "postcss ./src/styles/main.css -o ./public/styles/output.css --watch",
-    "build": "postcss ./src/styles/main.css -o ./public/styles/output.css --minify"
+    "dev": "postcss ./src/styles/main.css -o ./styles/output.css --watch",
+    "build": "postcss ./src/styles/main.css -o ./styles/output.css --minify"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,8 @@
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "tailwindcss": "^3.4.16"
+  },
+  "dependencies": {
+    "lottie-react": "^2.4.0"
   }
 }

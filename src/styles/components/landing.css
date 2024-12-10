@@ -1,43 +1,22 @@
 /* Landing Section Styles */
 .landing-section {
-    background: var(--background);
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding-top: 80px;
-    animation: fadeIn 1s ease-out;
-    position: relative;
     overflow: hidden;
 }
 
-.landing-section::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(from 180deg at 50% 70%,
-        #f626af 0deg,
-        #8228ec 72deg,
-        #f626af 144deg,
-        #0025ba 216deg,
-        #f626af 288deg,
-        #fafafa 360deg);
-    opacity: 0.05;
-    filter: blur(50px);
-    animation: backgroundRotate 20s linear infinite;
-}
-
-@keyframes backgroundRotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
 
 .landing-content {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 60px;
     max-width: 1000px;
     margin: 0 auto;
+    z-index: 2;
 }
 
 .landing-text {
@@ -51,7 +30,6 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
 }
 
 .landing-text .title {
@@ -67,65 +45,9 @@
     line-height: 1.6;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.cta-primary, .cta-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.cta-primary {
-    background: var(--gradient);
-    color: var(--white);
-    border: none;
-}
-
-.cta-secondary {
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-}
-
-.cta-primary:hover, .cta-secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
-}
-
-@media (max-width: 768px) {
-    .landing-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .landing-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .landing-text .title {
-        font-size: 1.5rem;
-    }
-
-    .cta-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-/* Reference existing landing styles */
-
 .profile-image {
-    flex-shrink: 0;
+    position: relative;
+    z-index: 3;
 }
 
 .profile-image img {
@@ -141,4 +63,53 @@
 .profile-image img:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-primary {
+    background: var(--gradient);
+    color: var(--white);
+    border: none;
+}
+
+.cta-secondary {
+    background: var(--gradient);
+    color: var(--white);
+    border: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+    .landing-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .landing-text h1 {
+        font-size: 2.5rem;
+    }
 }

@@ -1,23 +1,32 @@
 /* About Section */
 .about-section {
-    background: var(--background);
     padding: 120px 0;
+    position: relative;
+}
+
+.about-section .container {
+    background: rgba(13, 18, 36, 0.4);
+    border: 2px solid rgba(130, 40, 236, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    /* overflow: hidden; */
 }
 
 .about-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: var(--primary);
+    position: relative;
+    z-index: 2;
 }
 
 .about-text-content {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
 }
 
 .bio, .skills, .interests {
@@ -28,6 +37,10 @@
     color: var(--primary);
     margin-bottom: 15px;
     font-size: 1.5rem;
+}
+
+.bio p, .interests p {
+    color: var(--text);
 }
 
 @media (max-width: 768px) {

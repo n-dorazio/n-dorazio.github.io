@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponent('about', '/src/components/about.html');
     loadComponent('projects', '/src/components/projects.html');
     loadComponent('footer', '/src/components/footer.html');
+    
+    // Initialize Lottie animation
+    initLottieBackground();
+
+    console.log('All components loaded');
 });
 
 function initializeScrollers() {
@@ -50,4 +55,34 @@ function addAnimation() {
     });
   });
 }
+}
+
+function initLottieBackground() {
+    const animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-background'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'src/assets/BackgroundAnimation.json',
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice',
+            progressiveLoad: true,
+            hideOnTransparent: true,
+        }
+    });
+
+    // Set animation speed
+    animation.setSpeed(0.5);
+    
+    // Reduce animation quality for better performance
+    animation.setQuality('low');
+
+    // Handle resize events with debouncing
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            animation.resize();
+        }, 150);
+    });
 }
