@@ -16,11 +16,11 @@ async function loadComponent(elementId, componentPath) {
 
 // Load all components when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    loadComponent('nav', '/public/src/components/nav.html');
-    loadComponent('landing', '/public/src/components/landing.html');
-    loadComponent('about', '/public/src/components/about.html');
-    loadComponent('projects', '/public/src/components/projects.html');
-    loadComponent('footer', '/public/src/components/footer.html');
+    loadComponent('nav', '/src/components/nav.html');
+    loadComponent('landing', '/src/components/landing.html');
+    loadComponent('about', '/src/components/about.html');
+    loadComponent('projects', '/src/components/projects.html');
+    loadComponent('footer', '/src/components/footer.html');
 });
 
 function initializeScrollers() {

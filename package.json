@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "postcss ./public/src/styles/main.css -o ./public/styles/output.css --watch",
-    "build": "postcss ./public/src/styles/main.css -o ./public/styles/output.css --minify"
+    "dev": "postcss ./src/styles/main.css -o ./public/styles/output.css --watch",
+    "build": "postcss ./src/styles/main.css -o ./public/styles/output.css --minify"
   },
   "keywords": [],
   "author": "",
