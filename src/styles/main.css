@@ -19,6 +19,7 @@
     --text-light: #84738c;
     --white: #ffffff;
     --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+    --min-scale: 0.75;
 }
 
 @layer base {
@@ -44,13 +45,16 @@
         position: relative;
         overflow-x: hidden;
         min-height: 100vh;
-        min-width: 320px;
+        min-width: calc(320px / var(--min-scale));
+        transform-origin: top left;
     }
 
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 80px;
         -webkit-overflow-scrolling: touch;
+        min-width: calc(320px / var(--min-scale));
+        overflow-x: hidden;
     }
 
     .min-h-screen {
@@ -60,7 +64,7 @@
 
 @layer components {
     .container {
-        min-width: 320px;
+        min-width: calc(320px / var(--min-scale));
         width: 100%;
         max-width: 1200px;
         margin-left: auto;
