@@ -1087,6 +1087,15 @@ nav {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
 }
+.channel-link {
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.channel-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
