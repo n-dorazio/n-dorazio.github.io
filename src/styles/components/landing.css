@@ -2,6 +2,7 @@
 .landing-section {
     position: relative;
     min-height: 100vh;
+    min-width: 320px;
     display: flex;
     align-items: center;
     padding-top: 80px;
@@ -14,9 +15,11 @@
     display: flex;
     align-items: center;
     gap: 60px;
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     z-index: 2;
+    padding: 20px;
 }
 
 .landing-text {
@@ -136,5 +139,29 @@
 
     .landing-text .tagline {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .landing-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .landing-text .title {
+        font-size: 1.2rem;
+    }
+
+    .landing-text .tagline {
+        font-size: 0.9rem;
+    }
+
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cta-button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
     }
 }
