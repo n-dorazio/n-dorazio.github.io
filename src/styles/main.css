@@ -9,7 +9,7 @@
 @import './components/about.css';
 @import './components/skills.css';
 @import './components/projects.css';
-@import './components/footer.css';
+@import './components/contact.css';
 
 :root {
     --background: #0d1224;

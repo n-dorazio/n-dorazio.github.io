@@ -20,13 +20,69 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponent('landing', '/src/components/landing.html');
     loadComponent('about', '/src/components/about.html');
     loadComponent('projects', '/src/components/projects.html');
-    loadComponent('footer', '/src/components/footer.html');
+    loadComponent('contact', '/src/components/contact.html');
     
     // Initialize Lottie animation
     initLottieBackground();
 
     console.log('All components loaded');
+
+    // Initialize EmailJS
+    (function() {
+        emailjs.init("1wMeBe2SEPbkLYxuF");
+        console.log("EmailJS initialized");
+    })();
+
+    // Add form submission handler
+    console.log("Setting up form submission handler");
+    
+    document.body.addEventListener('click', function(e) {
+        if (e.target.closest('.submit-btn')) {
+            console.log("Submit button clicked");
+            const form = document.getElementById('contact-form');
+            handleFormSubmit(form);
+        }
+    });
 });
+
+async function handleFormSubmit(form) {
+    console.log("Handling form submission");
+    
+    const submitButton = form.querySelector('.submit-btn');
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    
+    const formData = {
+        from_name: form.name.value,
+        from_email: form.email.value,
+        message: form.message.value,
+        to_name: "Nathaniel D'Orazio"
+    };
+    
+    console.log("Form data:", formData);
+    
+    try {
+        console.log("Attempting to send email...");
+        const response = await emailjs.send(
+            'service_ze3w9td',
+            'template_x7x6bef',
+            formData
+        );
+        console.log("Email sent successfully:", response);
+        
+        submitButton.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+        form.reset();
+        
+    } catch (error) {
+        console.error('Failed to send email:', error);
+        submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to send';
+    }
+    
+    setTimeout(() => {
+        submitButton.disabled = false;
+        submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    }, 3000);
+}
 
 function initializeScrollers() {
     const scrollers = document.querySelectorAll(".scroller");
@@ -68,21 +124,10 @@ function initLottieBackground() {
             preserveAspectRatio: 'xMidYMid slice',
             progressiveLoad: true,
             hideOnTransparent: true,
+            className: 'lottie-svg'
         }
     });
 
     // Set animation speed
     animation.setSpeed(0.5);
-    
-    // Reduce animation quality for better performance
-    animation.setQuality('low');
-
-    // Handle resize events with debouncing
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            animation.resize();
-        }, 150);
-    });
 }
