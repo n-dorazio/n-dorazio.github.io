@@ -503,6 +503,14 @@ video {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-overflow-scrolling: touch;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0;
     }
 
     body {
@@ -518,6 +526,7 @@ video {
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 80px;
+        -webkit-overflow-scrolling: touch;
     }
 .container {
   width: 100%;
@@ -626,7 +635,8 @@ nav {
     padding: 20px 0;
     z-index: 100;
     -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     height: 80px;
     background: rgba(13, 18, 36, 0.4) !important;
@@ -753,7 +763,31 @@ nav {
     }
 
     .landing-text h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .profile-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+@media (max-width: 480px) {
+    .landing-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .landing-text .title {
+        font-size: 1.5rem;
+    }
+
+    .landing-text .tagline {
+        font-size: 1rem;
     }
 }
 /* About Section */
@@ -1130,7 +1164,10 @@ nav {
 }
 .form-group textarea {
     height: 150px;
+    min-height: 150px;
+    max-height: 400px;
     resize: vertical;
+    transition: height 0.2s ease;
 }
 .form-group input:focus,
 .form-group textarea:focus {
@@ -1169,6 +1206,30 @@ nav {
 @media (max-width: 768px) {
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-info {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-link span {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
     }
 }
 :root {

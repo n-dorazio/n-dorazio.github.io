@@ -26,6 +26,14 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-overflow-scrolling: touch;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0;
     }
 
     body {
@@ -41,6 +49,11 @@
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 80px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .min-h-screen {
+        min-height: -webkit-fill-available;
     }
 }
 
