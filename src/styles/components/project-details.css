@@ -1,0 +1,50 @@
+.project-details-container {
+    max-width: 1200px;
+    margin: 120px auto 60px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.media-section {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 2px solid var(--primary);
+}
+
+.project-info {
+    background: rgba(13, 18, 36, 0.4);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(130, 40, 236, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.project-title {
+    font-size: 2.5rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.project-technologies {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.project-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Reuse existing carousel and action button styles from projects.css */

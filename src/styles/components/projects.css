@@ -78,6 +78,7 @@
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .project-card:hover .project-overlay {
@@ -111,33 +112,6 @@
     gap: 16px;
 }
 
-.project-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.demo-link {
-    background: var(--gradient);
-    color: var(--white);
-}
-
-.github-link {
-    background: transparent;
-    color: var(--white);
-    border: 1px solid var(--white);
-}
-
-.project-links a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
-}
-
 .channel-link {
     color: var(--accent);
     text-decoration: none;
@@ -147,6 +121,23 @@
 .channel-link:hover {
     color: var(--primary);
     text-decoration: underline;
+}
+
+.project-title {
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.project-title h3 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.project-overlay .project-links {
+    pointer-events: auto;
 }
 
 @media (max-width: 768px) {
@@ -159,4 +150,31 @@
         font-size: 2rem;
     }
 }
+
+.project-links .project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.project-links .project-btn-primary {
+    background: var(--gradient);
+    color: var(--white);
+    border: none;
+}
+
+.project-links .project-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+    transform: scale(1.1);
+}
+
 

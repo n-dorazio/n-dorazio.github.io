@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.75">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#0d1224">
+    <title>Project Details - Nathaniel D'Orazio</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../styles/output.css">
+    <link rel="stylesheet" href="../styles/components/nav.css">
+    <link rel="stylesheet" href="../styles/components/background.css">
+    <link rel="stylesheet" href="../styles/components/project-details.css">
+    
+    <!-- External Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div id="nav"></div>
+    <div id="lottie-background" class="lottie-container"></div>
+    
+    <div class="project-details-container">
+        <div class="media-section">
+            <div class="carousel-container">
+                <!-- Media items will be inserted here dynamically -->
+            </div>
+            <button class="carousel-btn prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="project-info">
+            <h1 class="project-title"></h1>
+            <div class="project-technologies"></div>
+            <div class="project-description"></div>
+            <div class="project-actions"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script type="module" src="../js/project-details.js"></script>
+</body>
+</html>
