@@ -905,20 +905,33 @@ h4 {
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: var(--color-secondary);
+  background: rgba(13, 18, 36, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity var(--transition-base);
+  pointer-events: none;
 }
 .project-overlay .project-links {
   pointer-events: auto;
   display: flex;
   gap: var(--spacing-md);
 }
-.project-card:hover .project-overlay {
+.project-card {
+  cursor: pointer;
+}
+/* Show overlay on hover for desktop */
+@media (hover: hover) {
+  .project-card:hover .project-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+/* Show overlay when active (clicked) */
+.project-overlay.active {
   opacity: 1;
+  pointer-events: auto;
 }
 .project-content {
   padding: var(--spacing-md);

@@ -16,6 +16,11 @@ async function loadComponent(elementId, componentPath) {
         if (elementId === 'about') {
             initializeScrollers();
         }
+
+        // Initialize project cards after projects section is loaded
+        if (elementId === 'projects') {
+            initProjectCards();
+        }
     } catch (error) {
         console.error(`Error loading ${componentPath}:`, error);
     }
@@ -155,4 +160,34 @@ function initMobileMenu() {
             });
         });
     }
+}
+
+function initProjectCards() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Don't trigger if clicking on a button
+            if (e.target.closest('.btn')) return;
+            
+            const overlay = card.querySelector('.project-overlay');
+            // Remove active class from all other overlays
+            document.querySelectorAll('.project-overlay.active').forEach(other => {
+                if (other !== overlay) {
+                    other.classList.remove('active');
+                }
+            });
+            // Toggle current overlay
+            overlay.classList.toggle('active');
+        });
+    });
+
+    // Close overlay when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.project-card')) {
+            document.querySelectorAll('.project-overlay.active').forEach(overlay => {
+                overlay.classList.remove('active');
+            });
+        }
+    });
 }
