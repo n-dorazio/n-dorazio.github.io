@@ -3,41 +3,43 @@ nav {
     position: fixed;
     width: 100%;
     padding: 20px 0;
-    z-index: 100;
+    z-index: var(--z-nav);
     -webkit-backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     height: 80px;
-    background: rgba(13, 18, 36, 0.4) !important;
-    box-shadow: none;
+    background: rgba(13, 18, 36, 0.4);
+    border-bottom: 1px solid rgba(130, 40, 236, 0.2);
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--container-padding);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: var(--spacing-xl);
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text);
+    color: var(--color-text);
     font-weight: 500;
-    transition: color 0.3s;
+    transition: var(--transition-base);
     position: relative;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
 }
 
-.nav-links a:hover {
-    color: var(--primary);
-    transform: scale(1.1);
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--color-primary);
 }
 

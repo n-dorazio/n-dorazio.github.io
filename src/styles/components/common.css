@@ -1,0 +1,10 @@
+body {
+  background: #0d1224;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.section {
+  padding: 120px 0;
+  position: relative;
+}

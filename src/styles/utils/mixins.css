@@ -1,0 +1,15 @@
+/* Common utility classes */
+
+.container {
+  min-width: calc(320px / var(--min-scale));
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Mobile: max-width: 480px */
+/* Tablet: max-width: 768px */
+/* Desktop: max-width: 1024px */

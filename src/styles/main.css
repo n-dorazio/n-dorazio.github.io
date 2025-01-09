@@ -2,74 +2,24 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import './animations.css';
-@import './components/background.css';
+/* Base */
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+
+/* Utils */
+@import './utils/mixins.css';
+@import './utils/animations.css';
+@import './utils/backgrounds.css';
+
+/* Components */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/forms.css';
 @import './components/nav.css';
-@import './components/landing.css';
-@import './components/about.css';
-@import './components/skills.css';
-@import './components/projects.css';
-@import './components/contact.css';
-
-:root {
-    --background: #0d1224;
-    --primary: #8228ec;
-    --accent: #f626af;
-    --text: #d3d8e8;
-    --text-light: #84738c;
-    --white: #ffffff;
-    --gradient: linear-gradient(135deg, var(--primary), var(--accent));
-    --min-scale: 0.75;
-}
-
-@layer base {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-tap-highlight-color: transparent;
-        -webkit-overflow-scrolling: touch;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: 0;
-    }
-
-    body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        line-height: 1.6;
-        color: var(--text);
-        background-color: var(--background);
-        position: relative;
-        overflow-x: hidden;
-        min-height: 100vh;
-        min-width: calc(320px / var(--min-scale));
-        transform-origin: top left;
-    }
-
-    html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 80px;
-        -webkit-overflow-scrolling: touch;
-        min-width: calc(320px / var(--min-scale));
-        overflow-x: hidden;
-    }
-
-    .min-h-screen {
-        min-height: -webkit-fill-available;
-    }
-}
-
-@layer components {
-    .container {
-        min-width: calc(320px / var(--min-scale));
-        width: 100%;
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-    }
-}
+/* Layouts */
+@import './layouts/about.css';
+@import './layouts/contact.css';
+@import './layouts/landing.css';
+@import './layouts/projects.css';
+@import './layouts/skills.css';
