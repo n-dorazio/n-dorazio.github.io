@@ -1,8 +1,8 @@
 :root {
   /* Core Colors */
   --color-background: #0d1224;
-  --color-primary: #6d28d9;      /* Deep purple */
-  --color-primary-light: #7c3aed; /* Lighter purple for hover */
+  --color-primary: #6982ff;      
+  --color-primary-light:#6982ff; /* for hover */
   --color-secondary: #1e293b;    /* Dark blue-gray */
   --color-accent: #3b82f6;       /* Bright blue */
   
@@ -16,7 +16,7 @@
   --color-card-bg: rgba(30, 41, 59, 0.4);   /* Semi-transparent dark blue */
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #6d28d9 0%, #3b82f6 100%);
+  --gradient-primary: linear-gradient(135deg, #4f2ed5 0%, #3b82f6 100%);
   --gradient-hover: linear-gradient(135deg, #7c3aed 0%, #60a5fa 100%);
   
   /* Spacing */
@@ -60,6 +60,7 @@
   --font-size-2xl: 1.5rem;    /* 24px */
   --font-size-3xl: 2rem;      /* 32px */
   --font-size-4xl: 2.5rem;    /* 40px */
+  --font-size-5xl: 4rem;      /* 64px */
   
   /* Line Heights */
   --line-height-tight: 1.2;

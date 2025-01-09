@@ -43,12 +43,11 @@ h4 {
 
 /* Landing Text */
 .landing-text h1 {
-  font-size: var(--font-size-3xl);
+  font-size: 4rem;
   margin-bottom: var(--spacing-xs);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
 }
 
 .landing-text .title {
@@ -133,6 +132,6 @@ h4 {
   }
 
   .landing-text h1 {
-    font-size: var(--font-size-2xl);
+    font-size: 3rem;
   }
 }
