@@ -26,7 +26,7 @@ h4 {
 }
 
 /* Section Headers */
-.section-title {
+.section-title, .section-header h2 {
   font-size: var(--font-size-3xl);
   color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
@@ -39,6 +39,41 @@ h4 {
   text-align: center;
   max-width: 600px;
   margin: 0 auto var(--spacing-lg);
+}
+
+/* Landing Text */
+.landing-text h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-xs);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-text .title {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.landing-text .tagline {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+/* Bio Text */
+.bio h3, .skills h3, .interests h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+}
+
+.bio p, .interests p {
+  color: var(--color-text);
+  line-height: var(--line-height-base);
 }
 
 /* Gradient Text */
@@ -94,6 +129,10 @@ h4 {
   }
 
   .section-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .landing-text h1 {
     font-size: var(--font-size-2xl);
   }
 }

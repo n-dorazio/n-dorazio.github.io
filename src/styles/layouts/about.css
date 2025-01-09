@@ -32,23 +32,8 @@
     margin-bottom: var(--spacing-lg);
 }
 
-.bio h3, .skills h3, .interests h3 {
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-sm);
-    font-size: var(--font-size-xl);
-}
-
-.bio p, .interests p {
-    color: var(--color-text);
-    line-height: var(--line-height-base);
-}
-
 @media (max-width: 768px) {
     .about-section {
         padding: var(--spacing-xl) 0;
-    }
-    
-    .about-section h2 {
-        font-size: var(--font-size-2xl);
     }
 }

@@ -20,12 +20,6 @@
     opacity: 0.3;
 }
 
-.skills-header h3 {
-    padding: var(--spacing-xs) var(--spacing-md);
-    border-radius: var(--border-radius-md);
-    font-size: var(--font-size-xl);
-}
-
 .skill-item {
     width: clamp(100px, 30vw, 160px);
     height: clamp(100px, 30vw, 140px);
@@ -48,7 +42,6 @@
     object-fit: contain;
     transition: all 0.3s ease;
 }
-
 .skill-item span {
     font-size: clamp(0.8rem, 2vw, 1rem);
     color: var(--accent);
@@ -131,3 +124,4 @@
 .scroller[data-speed="slow"] {
     --_animation-duration: 60s;
 }
+

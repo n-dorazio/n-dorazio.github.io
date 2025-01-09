@@ -8,12 +8,6 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.section-header h2 {
-  font-size: var(--font-size-2xl);
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-sm);
-}
-
 .section-header::before,
 .section-header::after {
   content: '';

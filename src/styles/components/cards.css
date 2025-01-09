@@ -52,6 +52,8 @@
 
 .project-overlay .project-links {
   pointer-events: auto;
+  display: flex;
+  gap: var(--spacing-md);
 }
 
 .project-card:hover .project-overlay {

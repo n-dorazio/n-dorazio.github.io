@@ -1,3 +1,5 @@
+import { initLottieBackground } from './backgroundAnimation.js';
+
 // Function to load HTML content
 async function loadComponent(elementId, componentPath) {
     try {
@@ -21,6 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponent('about', '/src/components/about.html');
     loadComponent('projects', '/src/components/projects.html');
     loadComponent('contact', '/src/components/contact.html');
+    
+    // Check for hash in URL and scroll to section after components are loaded
+    const hash = window.location.hash;
+    if (hash) {
+        // Wait for components to load
+        setTimeout(() => {
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 500); // Increased timeout to ensure components are loaded
+    }
     
     // Initialize Lottie animation
     initLottieBackground();
@@ -111,23 +125,4 @@ function addAnimation() {
     });
   });
 }
-}
-
-function initLottieBackground() {
-    const animation = lottie.loadAnimation({
-        container: document.getElementById('lottie-background'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'src/assets/BackgroundAnimation.json',
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice',
-            progressiveLoad: true,
-            hideOnTransparent: true,
-            className: 'lottie-svg'
-        }
-    });
-
-    // Set animation speed
-    animation.setSpeed(0.5);
 }
