@@ -52,24 +52,71 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('All components loaded');
 
     // Initialize EmailJS
-    (function() {
-        emailjs.init("1wMeBe2SEPbkLYxuF");
-        console.log("EmailJS initialized");
-    })();
-
-    // Add form submission handler
-    console.log("Setting up form submission handler");
+    emailjs.init("1wMeBe2SEPbkLYxuF");
     
+    // Add form submission handler
     document.body.addEventListener('click', function(e) {
-        if (e.target.closest('.submit-btn')) {
-            console.log("Submit button clicked");
+        const submitBtn = e.target.closest('.btn-primary');
+        if (submitBtn && submitBtn.closest('#contact-form')) {
+            e.preventDefault();
             const form = document.getElementById('contact-form');
-            handleFormSubmit(form);
+            if (form) {
+                handleFormSubmit(form);
+            }
         }
     });
 });
 
+function validateForm(form) {
+    let isValid = true;
+    const errors = {
+        name: '',
+        email: '',
+        message: ''
+    };
+
+    // Clear previous error messages
+    document.querySelectorAll('.error-message').forEach(error => error.textContent = '');
+
+    // Name validation
+    if (!form.name.value.trim()) {
+        errors.name = 'Name is required';
+        isValid = false;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!form.email.value.trim()) {
+        errors.email = 'Email is required';
+        isValid = false;
+    } else if (!emailRegex.test(form.email.value)) {
+        errors.email = 'Please enter a valid email address';
+        isValid = false;
+    }
+
+    // Message validation
+    if (!form.message.value.trim()) {
+        errors.message = 'Message is required';
+        isValid = false;
+    }
+
+    // Display error messages
+    if (!isValid) {
+        Object.keys(errors).forEach(field => {
+            if (errors[field]) {
+                document.getElementById(`${field}-error`).textContent = errors[field];
+            }
+        });
+    }
+
+    return isValid;
+}
+
 async function handleFormSubmit(form) {
+    if (!validateForm(form)) {
+        return;
+    }
+    
     console.log("Handling form submission");
     
     const submitButton = form.querySelector('.submit-btn');
