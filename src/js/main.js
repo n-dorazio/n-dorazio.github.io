@@ -7,6 +7,11 @@ async function loadComponent(elementId, componentPath) {
         const html = await response.text();
         document.getElementById(elementId).innerHTML = html;
         
+        // Initialize mobile menu after nav is loaded
+        if (elementId === 'nav') {
+            initMobileMenu();
+        }
+        
         // Initialize scrollers after about section is loaded
         if (elementId === 'about') {
             initializeScrollers();
@@ -125,4 +130,29 @@ function addAnimation() {
     });
   });
 }
+}
+
+// Add this function to initialize the mobile menu
+function initMobileMenu() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        // Toggle menu when hamburger is clicked
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const isOpen = navLinks.classList.contains('active');
+            menuToggle.querySelector('i').classList.toggle('fa-bars', !isOpen);
+            menuToggle.querySelector('i').classList.toggle('fa-times', isOpen);
+        });
+
+        // Close menu when a nav link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+            });
+        });
+    }
 }

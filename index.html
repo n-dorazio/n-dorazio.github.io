@@ -43,5 +43,19 @@
     <script type="module" src="src/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.contains('active');
+                menuToggle.querySelector('i').classList.toggle('fa-bars', !isOpen);
+                menuToggle.querySelector('i').classList.toggle('fa-times', isOpen);
+            });
+        });
+    </script>
 </body>
 </html> 

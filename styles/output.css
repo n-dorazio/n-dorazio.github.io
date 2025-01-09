@@ -963,6 +963,43 @@ nav {
 .nav-links a.active {
     color: var(--color-primary);
 }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+@media (max-width: 768px) {
+    .nav-content {
+        justify-content: flex-end;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: rgba(13, 18, 36, 0.95);
+        -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+        padding: var(--spacing-md);
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
 /* Layouts */
 /* About Section */
 .about-section {
@@ -975,7 +1012,7 @@ nav {
             backdrop-filter: blur(10px);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-lg);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     position: relative;
 }
 .about-section h2 {
@@ -996,7 +1033,19 @@ nav {
 }
 @media (max-width: 768px) {
     .about-section {
-        padding: var(--spacing-xl) 0;
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .about-section .container {
+        padding: var(--spacing-md);
+    }
+
+    .about-text-content {
+        padding: 0;
+    }
+
+    .bio, .skills, .interests {
+        margin-bottom: var(--spacing-md);
     }
 }
 .contact-section {
@@ -1204,10 +1253,29 @@ nav {
     box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
     transform: scale(1.2);
 }
-@media (--tablet) {
+@media (max-width: 768px) {
     .landing-content {
         flex-direction: column;
         text-align: center;
+        padding: var(--spacing-sm);
+    }
+
+    .profile-image img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .profile-image img {
+        width: 200px;
+        height: 200px;
     }
 }
 .projects-section {
