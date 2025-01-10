@@ -15,31 +15,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.75">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#0d1224">
-    <title>Project Details - Nathaniel D'Orazio</title>
+
+    <!--Change to project title -->
+    <title>Project Details - Nathaniel D'Orazio</title> 
     
-    <link rel="stylesheet" href="../../styles/output.css">
+    <link rel="stylesheet" href="/styles/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Background container -->
     <div id="lottie-background" class="lottie-background"></div>
     
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-content">
-            <ul class="nav-links">
-                <li><a href="../../index.html#home">Home</a></li>
-                <li><a href="../../index.html#about">About</a></li>
-                <li><a href="../../index.html#projects">Projects</a></li>
-                <li><a href="../../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Main content -->
-    <div class="project-details-container backdrop-blur">
-        <!-- ... project content ... -->
-    </div>
+    <main>
+        <!-- Navigation -->
+        <div id="nav">
+            <nav>
+                <div class="nav-content">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/index.html#about">About</a></li>
+                        <li><a href="/index.html#projects">Projects</a></li>
+                        <li><a href="/index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Header -->     
+        <section class="project-header-section">
+            <div class="container">
+                <div class="project-header-content">
+                    <div class="project-header-text">
+                        <h1>Project Title</h1>
+                        <p class="tagline">Brief project intro here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-details-section">
+            <div class="container">
+                <!-- Feature Box 1 -->
+                <div class="feature-box">
+                    <h2>Feature Title</h2>
+                    <div class="feature-content image-left">
+                        <div class="feature-image">
+                            <img src="path/to/image.jpg" alt="Feature description">
+                        </div>
+                        <div class="feature-text">
+                            <p>Feature description text goes here...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Box 2 -->
+                <div class="feature-box">
+                    <h2>Another Feature</h2>
+                    <div class="feature-content image-right">
+                        <div class="feature-text">
+                            <p>Feature description text goes here...</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="path/to/image.jpg" alt="Feature description">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Box 3 -->
+                <div class="feature-box">
+                    <h2>Full Width Feature</h2>
+                    <div class="feature-content image-top">
+                        <div class="feature-image">
+                            <img src="path/to/image.jpg" alt="Feature description">
+                        </div>
+                        <div class="feature-text">
+                            <p>Feature description text goes here...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Feature Box -->
+                <div class="feature-video-wrapper">
+                    <h2>Video Demo</h2>
+                    <div class="feature-video">
+                        <video controls>
+                            <source src="../assets/videos/your-video-file.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="feature-video-description">
+                        <p>Video description or additional context goes here...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
     <script type="module" src="../js/project-details.js"></script>
