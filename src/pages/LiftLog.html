@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZEYHEMGGR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-3ZEYHEMGGR');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.75">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#0d1224">
+
+    <title>LiftLog Project Details - Nathaniel D'Orazio</title> 
+    
+    <link rel="stylesheet" href="/styles/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background container -->
+    <div id="lottie-background" class="lottie-background"></div>
+    
+    <!-- Main content -->
+    <main>
+        <!-- Navigation -->
+        <div id="nav">
+            <nav>
+                <div class="nav-content">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/index.html#about">About</a></li>
+                        <li><a href="/index.html#projects">Projects</a></li>
+                        <li><a href="/index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Header -->     
+        <section class="project-header-section">
+            <div class="container">
+                <div class="project-header-content">
+                    <div class="project-header-text">
+                        <h1>LiftLog</h1>
+                        <p class="tagline">This is the frontend of a fitness tracking app made for a course in Human Computer Interaction focusing on usability of the system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-details-section">
+            <div class="container">
+
+                <!-- Video Feature Box -->
+                <div class="feature-video-wrapper">
+                    <h2>Video Walkthrough</h2>
+                    <div class="feature-video">
+                        <video controls>
+                            <source src="/src/assets/LiftLog-Demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="feature-video-description">
+                        <p>A demonstration of the LiftLog app's core features and user interface.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script type="module" src="../js/project-details.js"></script>
+</body>
+</html>
