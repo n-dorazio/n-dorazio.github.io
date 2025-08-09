@@ -13,7 +13,7 @@
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -29,7 +29,7 @@
             </div>
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
@@ -68,22 +68,126 @@
             <div class="about-details-container"> 
                 <div class="about-containers">
                     <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience Icon" class="icon">
+                        <img src="./assets/experience.png" alt="Experience Icon" class="icon-img">
                         <h3>Experience</h3>
                         <p>2+ Years <br/>Frontend Development</p>
                     </div>
                     <div class="details-container">
-                         <img src="./assets/education.png" alt="Education Icon" class="icon">
+                         <img src="./assets/education.png" alt="Education Icon" class="icon-img">
                         <h3>Education</h3>
                         <p>B.Sc. Computer Science<br/>Bachelor of Commerce</p>
                     </div>
                 </div>
                 <div class="text-container">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi, id nobis eaque laudantium aperiam, sit harum iure, pariatur vitae ex. Dolore dicta soluta placeat esse id? Assumenda, qui iste.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi,
+                        id nobis eaque laudantium aperiam, sit harum iure, pariatur vitae ex.
+                        Dolore dicta soluta placeat esse id? Assumenda, qui iste.</p>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#sk'">
+        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#experience'">
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">
+           Explore My 
+        </p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="html">
+                    <div class="skill-header">
+                        <img src="./assets/checkmark.png" alt="HTML icon" class="skill-icon">
+                        <h3 class="skill-name">HTML</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>3+ years of experience creating semantic, accessible web structures. Proficient in HTML5 features, forms, and modern web standards.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="css">
+                    <div class="skill-header">
+                        <img src="./assets/checkmark.png" alt="CSS icon" class="skill-icon">
+                        <h3 class="skill-name">CSS</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Expert in responsive design, Flexbox, Grid, animations, and CSS preprocessors. Strong focus on modern styling techniques and performance.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="javascript">
+                    <div class="skill-header">
+                        <img src="./assets/checkmark.png" alt="JavaScript icon" class="skill-icon">
+                        <h3 class="skill-name">JavaScript</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Proficient in ES6+, DOM manipulation, async programming, and modern JavaScript frameworks. Experience with both frontend and backend development.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="java">
+                    <div class="skill-header">
+                        <img src="./assets/checkmark.png" alt="Java icon" class="skill-icon">
+                        <h3 class="skill-name">Java</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Strong foundation in object-oriented programming, data structures, and algorithms. Experience with Spring framework and enterprise applications.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="python">
+                    <div class="skill-header">
+                        <img src="./assets/checkmark.png" alt="Python icon" class="skill-icon">
+                        <h3 class="skill-name">Python</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Experienced in web development with Django/Flask, data analysis with pandas, and automation scripting. Clean, readable code practices.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="swift">
+                    <div class="skill-header">
+                        <img src="./assets/checkmark.png" alt="Swift icon" class="skill-icon">
+                        <h3 class="skill-name">Swift</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>iOS app development with UIKit and SwiftUI. Experience with Core Data, networking, and App Store deployment processes.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="cpp">
+                    <div class="skill-header">
+                        <img src="./assets/checkmark.png" alt="C++ icon" class="skill-icon">
+                        <h3 class="skill-name">C++</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Strong understanding of memory management, STL, and performance optimization. Experience with system programming and competitive programming.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="react">
+                    <div class="skill-header">
+                        <img src="./assets/checkmark.png" alt="React icon" class="skill-icon">
+                        <h3 class="skill-name">React</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Building modern, interactive web applications with hooks, context, and state management. Experience with Next.js and component libraries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#projects'">
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Check out my</p>
+        <h1 class="title">Projects</h1>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="./assets/project1.png" alt="Project 1 Image" class="project-image">
+                <h3>Project Title 1</h3>
+                <p>Short description of the project goes here.</p>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact</button>
+            </div>
+        </div>
     </section>
     <script src="script.js"></script>
 </body>

@@ -6,4 +6,79 @@
     #hamburger-nav {
         display: flex; /* show the hamburger menu on smaller screens */
     }
+    
+    /* Experience section responsive adjustments */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.25rem;
+    }
+    
+    .experience-details-container {
+        padding: 1.5rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Mobile-specific adjustments for experience section */
+    #experience {
+        padding: 8vh 1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .skill-card {
+        padding: 1.25rem;
+        min-height: 100px;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    
+    .skill-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    .skill-header {
+        gap: 0.75rem;
+    }
+    
+    .skill-name {
+        font-size: 1.1rem;
+    }
+    
+    .skill-description p {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Extra small screens */
+    #experience {
+        padding: 6vh 0.5rem;
+    }
+    
+    .experience-details-container {
+        padding: 1rem 0;
+    }
+    
+    .skill-card {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .skill-icon {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+    
+    .skill-name {
+        font-size: 1rem;
+    }
+    
+    .skill-description p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
 }
