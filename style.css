@@ -2,6 +2,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/* THEME COLOR SYSTEM */
+:root {
+  /* Primary Blues */
+  --color-primary-light: rgb(173, 216, 230);    /* Light blue */
+  --color-primary-medium: rgb(135, 206, 235);   /* Sky blue */
+  --color-primary-dark: rgb(100, 149, 237);     /* Cornflower blue - added for depth */
+  
+  /* Accent Oranges */
+  --color-accent-light: rgb(255, 140, 0);       /* Bright orange */
+  --color-accent-dark: rgb(204, 85, 0);         /* Deep orange */
+  --color-accent-warm: rgb(245, 222, 179);      /* Warm cream */
+  
+  /* Supporting Colors */
+  --color-neutral-light: rgb(248, 250, 252);    /* Very light blue-gray */
+  --color-neutral-medium: rgb(226, 232, 240);   /* Light blue-gray */
+  --color-neutral-dark: rgb(71, 85, 105);       /* Dark blue-gray */
+  --color-text-primary: rgb(30, 41, 59);        /* Dark blue-gray for text */
+  --color-text-secondary: rgb(100, 116, 139);   /* Medium blue-gray for secondary text */
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary-medium) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent-dark) 100%);
+  --gradient-subtle: linear-gradient(135deg, var(--color-neutral-light) 0%, var(--color-accent-warm) 100%);
+}
+
 
 * {
     margin: 0;
@@ -9,7 +34,14 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
+    background: 
+        radial-gradient(circle at 20% 80%, var(--color-primary-light) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, var(--color-accent-warm) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, var(--color-neutral-medium) 0%, transparent 50%),
+        linear-gradient(135deg, #ffffff 0%, var(--color-neutral-light) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 body:hover {
@@ -21,7 +53,7 @@ html {
 } 
 
 p {
-    color: rgb(85, 85, 85);
+    color: var(--color-text-secondary);
 }
 
 /* TRANSITION */
@@ -49,20 +81,22 @@ nav {
 }
 
 a {
-    color: black;
+    color: var(--color-text-primary);
     text-decoration: none;
-    text-decoration-color: white;
+    text-decoration-color: transparent;
 }
 
 a:hover {
-    color: grey;
+    color: var(--color-accent-light);
     text-decoration: underline;
-    text-underline-offset: 1rem; /* adds space between the text and the underline */
-    text-decoration-color: rgb(181, 181, 181);
+    text-underline-offset: 1rem;
+    text-decoration-color: var(--color-accent-light);
 }
 
 .logo {
     font-size: 2rem;
+    color: var(--color-primary-dark);
+    font-weight: 600;
 }
 
 /* HAMBURGER MENU */
@@ -88,7 +122,7 @@ a:hover {
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var(--color-text-primary);
     transition: all 0.3s ease-in-out;
 }
 
@@ -108,7 +142,7 @@ a:hover {
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: black;
+    color: var(--color-text-primary);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
@@ -172,6 +206,19 @@ section {
     height: 400px;
     width: 400px;
     margin: auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--color-primary-dark);
+    box-shadow: 0 8px 30px rgba(100, 149, 237, 0.3);
+    transition: all 0.3s ease;
+}
+
+
+.section_pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 10%;
 }
 
 .section__text {
@@ -184,16 +231,22 @@ section {
 }
 .section__text__p1 {
     text-align: center;
+    color: var(--color-accent-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .section__text__p2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: var(--color-text-secondary);
 }
 
 .title {
     font-size: 3rem;
     text-align: center;
+    color: var(--color-text-primary);
 }
 
 
@@ -232,28 +285,70 @@ section {
 }
 
 .btn-color-1, .btn-color-2 {
-    border: rgb(53, 53, 53) 0.1rem solid;
+    border: none;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .btn-color-1:hover, .btn-color-2:hover {
     cursor: pointer;
+    transform: translateY(-3px);
 }
 
-.btn-color-1, .btn-color-2:hover {
-    background: rgb(53, 53, 53);
+.btn-color-1 {
+    background: var(--color-primary-dark);
     color: white;
+    box-shadow: 0 4px 15px rgba(100, 149, 237, 0.3);
 }
 
 .btn-color-1:hover {
-    background: black;
+    background: var(--color-accent-dark);
+    box-shadow: 0 8px 25px rgba(204, 85, 0, 0.4);
+}
+
+.btn-color-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-color-1:hover::before {
+    left: 100%;
 }
 
 .btn-color-2 {
-    background: none;
+    background: transparent;
+    color: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-dark);
 }
 
 .btn-color-2:hover {
-    border: white 0.1rem solid;
+    background: var(--color-primary-dark);
+    color: white;
+    box-shadow: 0 4px 15px rgba(100, 149, 237, 0.3);
+}
+
+.btn-color-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+    z-index: 1;
+}
+
+.btn-color-2:hover::before {
+    left: 100%;
 }
 
 .btn-container {
@@ -301,22 +396,29 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--color-neutral-light);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: 2px solid var(--color-neutral-medium);
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.details-container:hover {
+  border-color: var(--color-primary-medium);
+  /* background: var(--gradient-subtle); */
+  background: none;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(135, 206, 235, 0.2);
+}
+
+.details-container h3 {
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
 }
 
 .section-container {
   gap: 4rem;
   height: 80%;
-}
-
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
 }
 
 /* EXPERIENCE SECTION */
@@ -343,10 +445,13 @@ section {
 }
 
 .skill-card {
-  background: white;
-  border: 2px solid rgb(163, 163, 163);
+  /* background: var(--color-neutral-light); */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid var(--color-primary-dark);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2.5rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -359,9 +464,11 @@ section {
 }
 
 .skill-card:hover {
-  border-color: rgb(53, 53, 53);
+  border-color: var(--color-primary-dark);
+  /* background: var(--gradient-subtle); */
+  background: var(--color-neutral-light);
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(135, 206, 235, 0.25), 0 4px 12px rgba(100, 149, 237, 0.15);
 }
 
 .skill-header {
@@ -377,12 +484,17 @@ section {
   height: 2rem;
   width: 2rem;
   flex-shrink: 0;
+  border: 2px solid var(--color-neutral-medium);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: white;
+  transition: all 0.3s ease;
 }
 
 .skill-name {
   font-size: 1.25rem;
   font-weight: 600;
-  color: rgb(53, 53, 53);
+  color: var(--color-text-primary);
   margin: 0;
 }
 
@@ -398,7 +510,7 @@ section {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: rgb(85, 85, 85);
+  color: var(--color-text-secondary);
 }
 
 /* Hover effect to show description */
@@ -418,10 +530,12 @@ section {
 
 /* Pinned state for click-to-keep-open functionality */
 .skill-card.pinned {
-  border-color: rgb(53, 53, 53);
+  border-color: var(--color-accent-dark);
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.15) 0%, rgba(204, 85, 0, 0.25) 100%);
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
-  background: linear-gradient(135deg, #fdfdfd 0%, #f8f9fa 100%);
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15),       /* Softer orange glow */
+              0 15px 35px rgba(204, 85, 0, 0.2),       /* Softer elevation shadow */
+              0 5px 15px rgba(204, 85, 0, 0.1);        /* Softer crisp shadow */
   justify-content: flex-start;
 }
 
@@ -436,23 +550,76 @@ section {
 }
 
 .skill-card.pinned .skill-name {
-  color: rgb(33, 33, 33);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Elegant pinned indicator - subtle corner accent */
-.skill-card.pinned::before {
-  content: '';
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  width: 8px;
-  height: 8px;
-  background: rgb(53, 53, 53);
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(53, 53, 53, 0.2);
+.skill-card.pinned .skill-description p {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
+
+.skill-card.pinned .skill-icon {
+  border-color: white;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Orange gradient and glow serves as the pinned indicator */
 
 
 
 /* PROJECTS */
+
+#projects {
+  position: relative;
+  padding: 10vh 2rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card {
+  background: var(--color-neutral-light);
+  border: 2px solid var(--color-neutral-medium);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.project-card:hover {
+  border-color: var(--color-primary-dark);
+  background: var(--gradient-subtle);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(135, 206, 235, 0.2), 0 5px 15px rgba(100, 149, 237, 0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card h3 {
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
 
