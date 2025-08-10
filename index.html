@@ -51,10 +51,10 @@
                 onclick="location.href='./#contact'">Contact</button>
             </div>
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/nathaniel-d-orazio-247392233/'" target="_blank">
-                <img src="./assets/github.png" alt="My Github Profile" class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/nathaniel-d-orazio-247392233/'" target="_blank">
+                <img src="./assets/linkedin.svg" alt="My LinkedIn Profile" class="icon" 
+                onclick="window.open('https://www.linkedin.com/in/nathaniel-d-orazio-247392233/', '_blank')">
+                <img src="./assets/github.svg" alt="My Github Profile" class="icon" 
+                onclick="window.open('https://github.com/n-dorazio', '_blank')">
             </div>
         </div>
     </section>
@@ -185,7 +185,7 @@
                     <p class="project-description">A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Features interactive skill cards, smooth animations, and a clean design that showcases my development abilities.</p>
                     <div class="project-links">
                         <button class="btn btn-color-1" onclick="window.open('https://github.com/yourusername/portfolio', '_blank')">
-                            <img src="./assets/github.png" alt="GitHub" class="link-icon">
+                            <img src="./assets/github.svg" alt="GitHub" class="link-icon">
                             <span>View Code</span>
                         </button>
                         <button class="btn btn-color-2" onclick="location.href='./projects/portfolio.html'">
@@ -205,7 +205,7 @@
                     <p class="project-description">Full-stack e-commerce application with user authentication, product management, shopping cart functionality, and secure payment processing using React and Node.js.</p>
                     <div class="project-links">
                         <button class="btn btn-color-1" onclick="window.open('https://github.com/yourusername/ecommerce', '_blank')">
-                            <img src="./assets/github.png" alt="GitHub" class="link-icon">
+                            <img src="./assets/github.svg" alt="GitHub" class="link-icon">
                             <span>View Code</span>
                         </button>
                         <button class="btn btn-color-2" onclick="location.href='./projects/ecommerce.html'">
@@ -225,7 +225,7 @@
                     <p class="project-description">A productivity application for managing tasks and projects.</p>
                     <div class="project-links">
                         <button class="btn btn-color-1" onclick="window.open('https://github.com/yourusername/taskmanager', '_blank')">
-                            <img src="./assets/github.png" alt="GitHub" class="link-icon">
+                            <img src="./assets/github.svg" alt="GitHub" class="link-icon">
                             <span>View Code</span>
                         </button>
                         <button class="btn btn-color-2" onclick="location.href='./projects/taskmanager.html'">
@@ -243,14 +243,14 @@
         <div class="contact-container">
             <div class="contact-card">
                 <div class="contact-header">
-                    <img src="./assets/email.png" alt="Email Icon" class="contact-icon">
+                    <img src="./assets/email.svg" alt="Email Icon" class="contact-icon">
                     <h3 class="contact-title">Email</h3>
                 </div>
                 <div class="contact-details">
                     <p class="contact-description">Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
                     <div class="contact-links">
                         <button class="btn btn-color-1" onclick="window.open('mailto:nathaniel.dorazio@example.com')">
-                            <img src="./assets/email.png" alt="Email" class="link-icon">
+                            <img src="./assets/email.svg" alt="Email" class="link-icon">
                             <span>Send Email</span>
                         </button>
                     </div>
@@ -259,14 +259,14 @@
             
             <div class="contact-card">
                 <div class="contact-header">
-                    <img src="./assets/linkedin.png" alt="LinkedIn Icon" class="contact-icon">
+                    <img src="./assets/linkedin.svg" alt="LinkedIn Icon" class="contact-icon">
                     <h3 class="contact-title">LinkedIn</h3>
                 </div>
                 <div class="contact-details">
                     <p class="contact-description">Connect with me on LinkedIn to stay updated with my professional journey and network.</p>
                     <div class="contact-links">
                         <button class="btn btn-color-2" onclick="window.open('https://www.linkedin.com/in/nathaniel-d-orazio-247392233/', '_blank')">
-                            <img src="./assets/linkedin.png" alt="LinkedIn" class="link-icon">
+                            <img src="./assets/linkedin.svg" alt="LinkedIn" class="link-icon">
                             <span>Connect</span>
                         </button>
                     </div>
@@ -275,14 +275,14 @@
             
             <div class="contact-card">
                 <div class="contact-header">
-                    <img src="./assets/github.png" alt="GitHub Icon" class="contact-icon">
+                    <img src="./assets/github.svg" alt="GitHub Icon" class="contact-icon">
                     <h3 class="contact-title">GitHub</h3>
                 </div>
                 <div class="contact-details">
                     <p class="contact-description">Check out my code repositories and contributions to open source projects.</p>
                     <div class="contact-links">
                         <button class="btn btn-color-2" onclick="window.open('https://github.com/yourusername', '_blank')">
-                            <img src="./assets/github.png" alt="GitHub" class="link-icon">
+                            <img src="./assets/github.svg" alt="GitHub" class="link-icon">
                             <span>View Profile</span>
                         </button>
                     </div>
@@ -290,6 +290,40 @@
             </div>
         </div>
     </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nathaniel D'Orazio</h3>
+                <p>Full-stack developer passionate about creating innovative web solutions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#profile">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-socials">
+                    <a href="mailto:nathaniel.dorazio.m@gmail.com">
+                        <img src="./assets/email.svg" alt="Email" class="footer-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/nathaniel-d-orazio-247392233/" target="_blank">
+                        <img src="./assets/linkedin.svg" alt="LinkedIn" class="footer-icon">
+                    </a>
+                    <a href="https://github.com/n-dorazio" target="_blank">
+                        <img src="./assets/github.svg" alt="GitHub" class="footer-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nathaniel D'Orazio. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
