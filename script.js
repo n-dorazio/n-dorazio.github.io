@@ -40,4 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+    
+    // Project card click-to-pin functionality
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Don't pin if clicking on a link
+            if (e.target.closest('.project-link')) {
+                return;
+            }
+            
+            e.preventDefault();
+            
+            // Toggle pinned state for the clicked card
+            this.classList.toggle('pinned');
+        });
+    });
 });

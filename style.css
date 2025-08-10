@@ -72,6 +72,15 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh; /* nav bar takes 17% of the screen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
@@ -95,8 +104,18 @@ a:hover {
 
 .logo {
     font-size: 2rem;
-    color: var(--color-primary-dark);
     font-weight: 600;
+}
+
+.logo a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo a:hover {
+    color: var(--color-accent-light);
+    transform: scale(1.05);
 }
 
 /* HAMBURGER MENU */
@@ -181,7 +200,7 @@ a:hover {
 /* SECTIONS */
 
 section {
-    padding-top: 4vh;
+    padding-top: calc(10vh + 17vh) !important; /* Account for fixed navbar */
     height: 96vh;
     margin: 0, 10rem;
     box-sizing: border-box;
@@ -262,6 +281,13 @@ section {
 .icon {
     cursor: pointer;
     height: 2rem;
+    transition: transform 0.2s ease;
+    opacity: 0.7;
+}
+
+.icon:hover {
+    opacity: 1;
+    transform: translateY(-2px);
 }
 
 .icon-img {
@@ -282,6 +308,13 @@ section {
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    white-space: normal;
+    line-height: 1.2;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .btn-color-1, .btn-color-2 {
@@ -359,7 +392,6 @@ section {
 
 #about {
   position: relative;
-  padding: 10vh;
 }
 
 .about-containers {
@@ -385,12 +417,6 @@ section {
   width: 400px;
   height: 400px;
   object-fit: cover;
-}
-
-.arrow {
-  position: absolute;
-  right: 5rem;
-  bottom: 2.5rem;
 }
 
 .details-container {
@@ -425,7 +451,7 @@ section {
 
 #experience {
   position: relative;
-  padding: 10vh 2rem;
+  padding: 0 2rem;
 }
 
 .experience-details-container {
@@ -573,10 +599,145 @@ section {
 
 #projects {
   position: relative;
-  padding: 10vh 2rem;
+  padding: 0 2rem;
 }
 
 .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid var(--color-primary-dark);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  border-color: var(--color-primary-dark);
+  background: var(--color-neutral-light);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(135, 206, 235, 0.2), 0 5px 15px rgba(100, 149, 237, 0.1);
+}
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 2px solid var(--color-neutral-medium);
+}
+
+.project-title {
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.project-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-description {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+.link-icon {
+  height: 1rem;
+  width: 1rem;
+  position: relative;
+  left: -5px;
+  bottom: 1px;
+}
+
+/* Hover effect to show project details */
+.project-card:hover .project-details {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* Pinned state for project cards */
+.project-card.pinned {
+  border-color: var(--color-accent-dark);
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.15) 0%, rgba(204, 85, 0, 0.25) 100%);
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15),
+              0 15px 35px rgba(204, 85, 0, 0.2),
+              0 5px 15px rgba(204, 85, 0, 0.1);
+}
+
+.project-card.pinned .project-details {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.project-card.pinned .project-title {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.project-card.pinned .project-description {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTACT SECTION */
+
+#contact {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.contact-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -586,40 +747,68 @@ section {
   margin-right: auto;
 }
 
-.project-card {
-  background: var(--color-neutral-light);
-  border: 2px solid var(--color-neutral-medium);
+.contact-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid var(--color-primary-dark);
   border-radius: 1.5rem;
   padding: 2rem;
-  text-align: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   overflow: hidden;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.project-card:hover {
-  border-color: var(--color-primary-dark);
-  background: var(--gradient-subtle);
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(135, 206, 235, 0.2), 0 5px 15px rgba(100, 149, 237, 0.1);
-}
-
-.project-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.project-card h3 {
-  color: var(--color-text-primary);
-  font-size: 1.5rem;
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
-.project-card p {
+.contact-icon {
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+  border: 2px solid var(--color-neutral-medium);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  background: white;
+}
+
+.contact-title {
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.contact-details {
+  margin-top: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-description {
   color: var(--color-text-secondary);
-  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
