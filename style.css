@@ -946,3 +946,239 @@ footer {
   margin: 0;
 }
 
+/* PROJECT PAGE STYLES */
+
+.back-button {
+  position: fixed;
+  top: 20%;
+  left: 2rem;
+  z-index: 1001;
+}
+
+/* Use existing title styles for all section headings */
+.project-goals h2,
+.project-process h2,
+.project-features h2,
+.project-gallery h2,
+.project-video h2,
+.project-links-section h2 {
+  font-size: 2.5rem;
+  color: var(--color-text-primary);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Project Header Section */
+.project-header-section {
+  padding: calc(10vh + 17vh) 2rem 4rem;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary-medium) 100%);
+}
+
+.project-header-content {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.project-header-content h1 {
+  font-size: 3.5rem;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.project-subtitle {
+  font-size: 1.5rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-category {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.overview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.overview-image {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.overview-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.project-hero-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* Project Goals */
+.project-goals {
+  padding: 4rem 0;
+}
+
+.goals-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.goal-item {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid var(--color-primary-dark);
+}
+
+.goal-item h3 {
+  color: var(--color-primary-dark);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.goal-item p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Project Process */
+.project-process {
+  padding: 4rem 0;
+  background: var(--color-neutral-light);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.step {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.step-number {
+  background: var(--color-primary-dark);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 auto 1rem;
+}
+
+.step h3 {
+  color: var(--color-text-primary);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.step p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Project Features */
+.project-features {
+  padding: 4rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid var(--color-primary-dark);
+  text-align: center;
+}
+
+.feature-card h3 {
+  color: var(--color-primary-dark);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Project Video */
+.project-video {
+  padding: 4rem 0;
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-video-player {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-caption {
+  text-align: center;
+  color: var(--color-text-secondary);
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+
+
+/* Fix underline on button links */
+.btn-container .btn {
+  text-decoration: none;
+}
+
+.btn-container .btn:hover {
+  text-decoration: none;
+}

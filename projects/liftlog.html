@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiftLog - Nathaniel D'Orazio Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="desktop-nav">
+        <div class="logo"><a href="../index.html#profile">Nathaniel D'Orazio</a></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html#profile">Nathaniel D'Orazio</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="../index.html#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="../index.html#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="../index.html#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <div class="back-button">
+        <button onclick="history.back()" class="btn btn-color-2">
+            <img src="../assets/arrow.png" alt="Back" class="link-icon" style="transform: rotate(90deg);">
+            <span>Back to Projects</span>
+        </button>
+    </div>
+
+    <!-- Project Header & Overview -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="project-header-content">
+                <h1 class="project-title">LiftLog</h1>
+                <p class="project-subtitle">Fitness Tracking Application</p>
+                <div class="project-meta">
+                    <span class="project-category">Human Computer Interaction</span>
+                </div>
+            </div>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>LiftLog is a frontend fitness tracking application designed for a Human Computer Interaction course, focusing on usability and user experience. The project explores how intuitive design can enhance user engagement in fitness applications.</p>
+                    <p>The application allows users to track workouts, monitor progress, and maintain fitness goals through a carefully designed interface that prioritizes ease of use and accessibility.</p>
+                </div>
+                <div class="overview-image">
+                    <img src="../assets/projects/LiftLog-Main.png" alt="LiftLog Main Screen" class="project-hero-image">
+                    <img src="../assets/projects/LiftLog-Workout.png" alt="LiftLog Workout Screen" class="project-hero-image">
+                </div>
+            </div>
+        </div>
+        <div class="btn-container" style="margin-top: 3rem;">
+            <a href="https://github.com/n-dorazio/liftlog" target="_blank" class="btn btn-color-1">
+                <img src="../assets/github.svg" alt="GitHub" class="link-icon">
+                <span>View Source Code</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Project Goals -->
+    <section class="project-goals">
+        <div class="container">
+            <h2 class="title">Project Goals</h2>
+            <div class="goals-content">
+                <div class="goal-item">
+                    <h3>Usability Research</h3>
+                    <p>Conduct comprehensive usability testing to identify pain points in fitness tracking applications and design solutions that address user needs.</p>
+                </div>
+                <div class="goal-item">
+                    <h3>User-Centered Design</h3>
+                    <p>Create an intuitive interface that makes fitness tracking accessible to users of all experience levels.</p>
+                </div>
+                <div class="goal-item">
+                    <h3>Academic Application</h3>
+                    <p>Apply Human Computer Interaction principles to real-world design challenges and document the process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Process -->
+    <section class="project-process">
+        <div class="container">
+            <h2 class="title">Design Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Research & Analysis</h3>
+                    <p>Analyzed existing fitness apps to understand common usability issues and user pain points.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>User Research</h3>
+                    <p>Conducted interviews and surveys with potential users to understand their needs and preferences.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Design & Prototyping</h3>
+                    <p>Created wireframes and prototypes focusing on usability and intuitive navigation.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Usability Testing</h3>
+                    <p>Tested the application with users and iterated based on feedback and observations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Features -->
+    <section class="project-features">
+        <div class="container">
+            <h2 class="title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Workout Tracking</h3>
+                    <p>Easy-to-use interface for logging exercises, sets, and reps with minimal cognitive load.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Progress Monitoring</h3>
+                    <p>Visual progress indicators and charts to help users track their fitness journey.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Goal Setting</h3>
+                    <p>Intuitive goal creation and tracking system with clear feedback mechanisms.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>User Profiles</h3>
+                    <p>Personalized experience with customizable user profiles and preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Project Video -->
+    <section class="project-video">
+        <div class="container">
+            <h2 class="title">Project Demo</h2>
+            <div class="video-container">
+                <video controls class="project-video-player">
+                    <source src="../assets/projects/liftlog-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video-caption">Walkthrough of LiftLog's key features and user interface</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nathaniel D'Orazio</h3>
+                <p>Full-stack developer passionate about creating innovative web solutions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html#profile">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-socials">
+                    <a href="mailto:nathaniel.dorazio.m@gmail.com">
+                        <img src="../assets/email.svg" alt="Email" class="footer-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/nathaniel-d-orazio-247392233/" target="_blank">
+                        <img src="../assets/linkedin.svg" alt="LinkedIn" class="footer-icon">
+                    </a>
+                    <a href="https://github.com/n-dorazio" target="_blank">
+                        <img src="../assets/github.svg" alt="GitHub" class="footer-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nathaniel D'Orazio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
