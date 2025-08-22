@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit - Nathaniel D'Orazio Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="desktop-nav">
+        <div class="logo"><a href="../index.html#profile">Nathaniel D'Orazio</a></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html#profile">Nathaniel D'Orazio</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="../index.html#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="../index.html#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="../index.html#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <div class="back-button">
+        <button onclick="history.back()" class="btn btn-color-2">
+            <img src="../assets/arrow.png" alt="Back" class="link-icon" style="transform: rotate(90deg);">
+            <span>Back to Projects</span>
+        </button>
+    </div>
+
+    <!-- Project Header & Overview -->
+    <section class="project-header-section">
+        <div class="container">
+            <div class="project-header-content">
+                <h1 class="project-title">Orbit</h1>
+                <p class="project-subtitle">iOS Social Networking App</p>
+                <div class="project-meta">
+                    <span class="project-category">iOS Development</span>
+                </div>
+            </div>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>Orbit is an iOS app built from the ground up with a team of students, entirely using Swift and Appwrite. We are on a mission to empower every university student the ability to find and approach other people who share similar interests, ultimately helping each one of us create lifelong friendships.</p>
+                    <p>At its core, Orbit addresses the isolation people feel despite living in a highly connected world. Its goal is to create a community where users—referred to as "astronauts"—can explore social connections, make friends, and feel a sense of belonging.</p>
+                </div>
+                <div class="overview-image">
+                    <img src="../assets/projects/OrbitMain.png" alt="Orbit Main Screen" class="project-hero-image">
+                    <img src="../assets/projects/OrbitProfile.png" alt="Orbit Profile Screen" class="project-hero-image">
+                </div>
+            </div>
+        </div>
+        <div class="btn-container" style="margin-top: 3rem;">
+            <a href="https://github.com/psycho-baller/Orbit" target="_blank" class="btn btn-color-1">
+                <img src="../assets/github.svg" alt="GitHub" class="link-icon">
+                <span>View Source Code</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Project Goals -->
+    <section class="project-goals">
+        <div class="container">
+            <h2 class="title">Project Goals</h2>
+            <div class="goals-content">
+                <div class="goal-item">
+                    <h3>Combat Social Isolation</h3>
+                    <p>Address the paradox of feeling alone despite living in a highly connected world by creating genuine social connections.</p>
+                </div>
+                <div class="goal-item">
+                    <h3>Student Community Building</h3>
+                    <p>Empower university students to find and connect with peers who share similar interests and values.</p>
+                </div>
+                <div class="goal-item">
+                    <h3>Lifelong Friendships</h3>
+                    <p>Create a platform that facilitates the formation of meaningful, lasting relationships among students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Process -->
+    <section class="project-process">
+        <div class="container">
+            <h2 class="title">Development Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Team Formation & Planning</h3>
+                    <p>Assembled a diverse team of students and established project goals, timeline, and technical requirements.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Design & Prototyping</h3>
+                    <p>Created wireframes and prototypes focusing on user experience and the social networking features.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Development & Testing</h3>
+                    <p>Built the app using Swift and Appwrite, with continuous testing and iteration based on user feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Features -->
+    <section class="project-features">
+        <div class="container">
+            <h2 class="title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Interest Matching</h3>
+                    <p>Filtering and sorting options to match students based on shared interests, hobbies, and academic pursuits.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Safe Environment</h3>
+                    <p>Built-in safety features and verification systems to ensure a secure networking experience.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Real-time Messaging</h3>
+                    <p>Instant messaging system for seamless communication between matched students.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Profile Customization</h3>
+                    <p>Detailed user profiles with interests, photos, and personal information to facilitate better connections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Video -->
+    <!-- ADD LATER -->
+    <!-- <section class="project-video">
+        <div class="container">
+            <h2 class="title">Project Demo</h2>
+            <div class="video-container">
+                <video controls class="project-video-player">
+                    <source src="../assets/projects/orbit-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video-caption">Walkthrough of Orbit's key features and user interface</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nathaniel D'Orazio</h3>
+                <p>Full-stack developer passionate about creating innovative web solutions</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html#profile">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-socials">
+                    <a href="mailto:nathaniel.dorazio.m@gmail.com">
+                        <img src="../assets/email.svg" alt="Email" class="footer-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/nathaniel-d-orazio-247392233/" target="_blank">
+                        <img src="../assets/linkedin.svg" alt="LinkedIn" class="footer-icon">
+                    </a>
+                    <a href="https://github.com/n-dorazio" target="_blank">
+                        <img src="../assets/github.svg" alt="GitHub" class="footer-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nathaniel D'Orazio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
