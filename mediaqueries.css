@@ -28,6 +28,15 @@
         display: flex;
     }
     
+    /* Fix background orientation on mobile */
+    body {
+        background: 
+            radial-gradient(circle at 50% 20%, var(--color-primary-light) 0%, transparent 40%),
+            radial-gradient(circle at 50% 80%, var(--color-accent-warm) 0%, transparent 40%),
+            linear-gradient(180deg, #ffffff 0%, var(--color-neutral-light) 100%);
+        background-attachment: fixed;
+    }
+    
     /* Profile Section */
     #profile {
         flex-direction: column;
@@ -171,11 +180,7 @@
     }
     
     .back-button {
-        position: fixed;
-        top: 13%;
-        left: 1rem;
-        transform: translateY(-50%);
-        z-index: 1001;
+        display: none;
     }
     
     .project-header-content h1 {
@@ -358,7 +363,11 @@
     
     .about-containers {
         margin-bottom: 1.5rem;
-        margin-top: 2.5rem;
+        margin-top: 3rem;
+    }
+    
+    .title {
+        margin-bottom: 1.5rem;
     }
     
     .details-container {
