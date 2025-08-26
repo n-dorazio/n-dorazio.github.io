@@ -141,7 +141,7 @@ a:hover {
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: var(--color-text-primary);
+    background-color: var(--color-primary-dark);
     transition: all 0.3s ease-in-out;
 }
 
@@ -149,21 +149,35 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: white;
-    width: fit-content;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 1rem;
+    width: 200px;
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 25px rgba(135, 206, 235, 0.15);
+}
+
+.menu-links.open {
+    border: 2px solid var(--color-primary-dark);
 }
 
 .menu-links a {
     display: block;
-    padding: 10px;
+    padding: 1rem 1.5rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--color-text-primary);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid rgba(135, 206, 235, 0.1);
+}
+
+.menu-links a:last-child {
+    border-bottom: none;
 }
 
 .menu-links li {
@@ -506,7 +520,6 @@ section {
   border: 2px solid var(--color-primary-dark);
   border-radius: 1rem;
   padding: 2.5rem;
-  cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -582,44 +595,7 @@ section {
   margin-top: 0.5rem;
 }
 
-/* Pinned state for click-to-keep-open functionality */
-.skill-card.pinned {
-  border-color: var(--color-accent-dark);
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.15) 0%, rgba(204, 85, 0, 0.25) 100%);
-  transform: translateY(-5px);
-  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15),       /* Softer orange glow */
-              0 15px 35px rgba(204, 85, 0, 0.2),       /* Softer elevation shadow */
-              0 5px 15px rgba(204, 85, 0, 0.1);        /* Softer crisp shadow */
-  justify-content: flex-start;
-}
 
-.skill-card.pinned .skill-header {
-  margin-bottom: 1rem;
-}
-
-.skill-card.pinned .skill-description {
-  max-height: 200px;
-  opacity: 1;
-  margin-top: 0.5rem;
-}
-
-.skill-card.pinned .skill-name {
-  color: white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.skill-card.pinned .skill-description p {
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.skill-card.pinned .skill-icon {
-  border-color: white;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Orange gradient and glow serves as the pinned indicator */
 
 
 
@@ -647,7 +623,6 @@ section {
   border: 2px solid var(--color-primary-dark);
   border-radius: 1.5rem;
   padding: 2rem;
-  cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -754,35 +729,7 @@ section {
   opacity: 1;
 }
 
-/* Pinned state for project cards */
-.project-card.pinned {
-  border-color: var(--color-accent-dark);
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.15) 0%, rgba(204, 85, 0, 0.25) 100%);
-  transform: translateY(-8px);
-  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15),
-              0 15px 35px rgba(204, 85, 0, 0.2),
-              0 5px 15px rgba(204, 85, 0, 0.1);
-}
-
-.project-card.pinned .project-details {
-  max-height: 300px;
-  opacity: 1;
-  margin-top: 1rem;
-}
-
-.project-card.pinned .project-links {
-  opacity: 1;
-}
-
-.project-card.pinned .project-title {
-  color: white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.project-card.pinned .project-description {
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
+/* Pin functionality removed - hover effect only on desktop */
 
 /* CONTACT SECTION */
 

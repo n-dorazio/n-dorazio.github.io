@@ -1,3 +1,4 @@
+/* NAVIGATION RESPONSIVE */
 @media screen and (max-width: 1200px) {
     #desktop-nav {
         display: none; /* hide the desktop nav on smaller screens */
@@ -6,18 +7,9 @@
     #hamburger-nav {
         display: flex; /* show the hamburger menu on smaller screens */
     }
-    
-    /* Experience section responsive adjustments */
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.25rem;
-    }
-    
-    .experience-details-container {
-        padding: 1.5rem 0;
-    }
 }
 
+/* TABLET LAYOUT */
 @media screen and (max-width: 900px) {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -25,10 +17,102 @@
     }
 }
 
+/* MOBILE LAYOUT */
 @media screen and (max-width: 768px) {
-    /* Mobile-specific adjustments for experience section */
+    /* Navigation */
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+    }
+    
+    /* Profile Section */
+    #profile {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    
+    .section_pic-container {
+        height: 300px;
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+    .section__text {
+        order: 2;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section__text__p2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        padding: 0.875rem;
+    }
+    
+    #socials-container {
+        margin-top: 1.5rem;
+    }
+    
+    .icon {
+        height: 1.75rem;
+    }
+    
+    /* About Section */
+    #about {
+        padding: 0 1rem;
+    }
+    
+    .about-details-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .about-containers {
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .details-container {
+        padding: 1.25rem;
+        margin: 0 0.5rem;
+    }
+    
+    .text-container {
+        padding: 0 1rem;
+        text-align: center;
+    }
+    
+    .text-container p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    /* Experience Section */
     #experience {
-        padding: 8vh 2rem;
+        padding: 8vh 1rem;
     }
     
     .experience-details-container {
@@ -64,12 +148,243 @@
     .skill-description p {
         font-size: 0.85rem;
     }
+    
+    /* Mobile: Always show skill descriptions */
+    .skill-card .skill-description {
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+        margin-top: 0.5rem;
+    }
+    
+    .skill-card {
+        justify-content: flex-start;
+    }
+    
+    .skill-card .skill-header {
+        margin-bottom: 1rem;
+    }
+    
+    /* Project Pages */
+    .overview-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .back-button {
+        position: fixed;
+        top: 13%;
+        left: 1rem;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+    
+    .project-header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Mobile: Always show project details */
+    .project-card .project-details {
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+        margin-top: 1rem;
+    }
+    
+    .project-card .project-links {
+        opacity: 1;
+    }
+    
+    /* Project Pages Mobile Optimization */
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .overview-image {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .project-hero-image {
+        max-width: 180px;
+        width: auto;
+        flex: 1;
+        min-width: 150px;
+    }
+    
+    .overview-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .goals-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .goal-item {
+        padding: 1.5rem;
+    }
+    
+    .goal-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .step {
+        padding: 1.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    /* Footer Mobile Optimization */
+    footer {
+        padding: 2rem 1rem 1rem;
+        margin-top: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+    
+    .footer-section ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .footer-section ul li {
+        margin-bottom: 0;
+    }
+    
+    .footer-socials {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-icon {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 1.5rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+    
 }
 
+/* SMALL MOBILE LAYOUT */
 @media screen and (max-width: 480px) {
-    /* Extra small screens */
+    /* Profile Section */
+    #profile {
+        padding: 1.5rem 0.5rem;
+        gap: 1.5rem;
+    }
+    
+    .section_pic-container {
+        height: 250px;
+        width: 250px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .section__text__p2 {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        max-width: 200px;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .icon {
+        height: 1.5rem;
+    }
+    
+    /* About Section */
+    #about {
+        padding: 0 0.5rem;
+    }
+    
+    .about-details-container {
+        padding: 0 0.5rem;
+    }
+    
+    .details-container {
+        padding: 1rem;
+        margin: 0 0.25rem;
+    }
+    
+    .text-container {
+        padding: 0 0.5rem;
+    }
+    
+    .text-container p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .education-item h4 {
+        font-size: 1rem;
+    }
+    
+    .education-item .school {
+        font-size: 0.9rem;
+    }
+    
+    .education-item .year {
+        font-size: 0.75rem;
+    }
+    
+    /* Experience Section */
     #experience {
-        padding: 6vh 1.5rem;
+        padding: 6vh 0.5rem;
     }
     
     .experience-details-container {
@@ -100,28 +415,78 @@
         font-size: 0.8rem;
         line-height: 1.4;
     }
-}
-
-/* PROJECT PAGE RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .overview-content {
-        grid-template-columns: 1fr;
+    
+    /* Project Pages Small Mobile Optimization */
+    .overview-image {
+        gap: 0.75rem;
     }
     
-    .back-button {
-        position: fixed;
-        top: 13%;
-        left: 1rem;
-        transform: translateY(-50%);
-        z-index: 1001;
+    .project-hero-image {
+        max-width: 140px;
+        min-width: 120px;
     }
     
-    .project-header-content h1 {
-        font-size: 2.5rem;
+    .overview-text p {
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
     
-    .project-meta {
-        flex-direction: column;
+    .goal-item {
+        padding: 1.25rem;
+    }
+    
+    .goal-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .step {
+        padding: 1.25rem;
+    }
+    
+    .feature-card {
+        padding: 1.25rem;
+    }
+    
+    /* Footer Small Mobile Optimization */
+    footer {
+        padding: 1.5rem 0.5rem 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .footer-content {
         gap: 1rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-socials {
+        gap: 1rem;
+    }
+    
+    .footer-icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 1rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.8rem;
     }
 }
