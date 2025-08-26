@@ -99,6 +99,10 @@
         margin-top: 2rem;
     }
     
+    .title {
+        margin-bottom: 3rem;
+    }
+    
     .about-containers {
         margin-bottom: 1.5rem;
         margin-top: 0;
@@ -222,7 +226,7 @@
         min-height: 280px;
         margin: 0 0.5rem;
         width: 100%;
-        max-width: 400px;
+        max-width: 350px;
     }
     
     /* Project Pages Mobile Optimization */
@@ -383,6 +387,10 @@
         margin-top: 1.5rem;
     }
     
+    .title {
+        margin-bottom: 2rem;
+    }
+    
     .about-containers {
         margin-bottom: 1.5rem;
         margin-top: 0;
@@ -496,7 +504,7 @@
         padding: 1.25rem;
         min-height: 260px;
         margin: 0 0.25rem;
-        max-width: 350px;
+        max-width: 320px;
     }
     
     /* Footer Small Mobile Optimization */
