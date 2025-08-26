@@ -91,7 +91,7 @@
     
     .about-containers {
         margin-bottom: 1.5rem;
-        margin-top: 1.5rem;
+        margin-top: 3rem;
     }
     
     .details-container {
@@ -354,6 +354,11 @@
     
     .about-details-container {
         padding: 0 0.5rem;
+    }
+    
+    .about-containers {
+        margin-bottom: 1.5rem;
+        margin-top: 2.5rem;
     }
     
     .details-container {
