@@ -90,6 +90,8 @@
     /* About Section */
     #about {
         padding: 4vh 1rem 0 1rem;
+        height: auto;
+        min-height: auto;
     }
     
     .about-details-container {
@@ -101,6 +103,8 @@
     
     .title {
         margin-bottom: 3rem;
+        position: relative;
+        z-index: 1;
     }
     
     .about-containers {
@@ -380,6 +384,8 @@
     /* About Section */
     #about {
         padding: 3vh 0.5rem 0 0.5rem;
+        height: auto;
+        min-height: auto;
     }
     
     .about-details-container {
@@ -389,6 +395,8 @@
     
     .title {
         margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
     }
     
     .about-containers {
